@@ -1,91 +1,125 @@
 import { useState } from 'react';
-import { ShoppingCart, MessageCircle, Settings, TrendingUp, PenTool, LayoutDashboard, Sparkles, ChevronDown } from 'lucide-react';
+import { Handshake, ShoppingCart, MessageCircle, BarChart3, Settings, PenTool, Target, Sparkles, ChevronDown } from 'lucide-react';
 
 interface Service {
   icon: React.ReactNode;
   title: string;
-  description: string;
-  features: string[];
+  shortDescription: string;
+  fullDescription: string;
+  includes: string[];
+  guarantee: string;
 }
 
 const services: Service[] = [
   {
+    icon: <Handshake className="w-8 h-8" />,
+    title: 'Strategic Partnership',
+    shortDescription: 'Grow your business faster with a long-term AI-driven partnership',
+    fullDescription: 'We don\'t just deliver services; we become your strategic partner. Together, we optimize your operations, enhance revenue, and multiply efficiency using AI and automation.',
+    includes: [
+      'Business process analysis & optimization',
+      'Long-term AI infrastructure planning',
+      'Continuous performance monitoring',
+      'Growth strategy implementation'
+    ],
+    guarantee: 'Refund until ROI target is met — we stay invested until your revenue or efficiency goals are achieved.'
+  },
+  {
     icon: <ShoppingCart className="w-8 h-8" />,
     title: 'Sales & Marketing',
-    description: 'AI-powered tools to accelerate your sales and amplify your marketing reach',
-    features: [
+    shortDescription: 'Boost conversions with AI-powered campaigns and content',
+    fullDescription: 'Increase your sales and customer engagement with AI-driven marketing strategies tailored to your business.',
+    includes: [
       'AI-generated product descriptions, images & videos',
       'Automated email, WhatsApp & Telegram campaigns',
       'Smart lead scoring & CRM automation',
       'Abandoned cart recovery flows',
       'Auto content generation & social scheduling'
-    ]
+    ],
+    guarantee: 'Refund until ROI target is met — we optimize until your sales metrics improve.'
   },
   {
     icon: <MessageCircle className="w-8 h-8" />,
-    title: 'Customer Support',
-    description: '24/7 intelligent support that scales with your business',
-    features: [
-      '24/7 AI chatbots (Web, WhatsApp, Telegram)',
-      'GPT-powered replies from your knowledge base',
-      'AI inbox assistant for fast ticket handling',
-      'Sentiment analysis from reviews & messages'
-    ]
+    title: 'Customer Support & Automation',
+    shortDescription: 'Delight customers and reduce manual workload',
+    fullDescription: 'Automate repetitive tasks and provide instant, reliable support to your clients.',
+    includes: [
+      'Appointment & booking automation',
+      'Ticket management & automated replies',
+      'Chatbots in multiple languages',
+      'Customer satisfaction tracking',
+      'Escalation flows for complex queries'
+    ],
+    guarantee: 'Refund until ROI target is met — your support efficiency and satisfaction goals will be reached, or you get refunded.'
+  },
+  {
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: 'Analytics & Reporting',
+    shortDescription: 'Make smarter decisions with actionable insights',
+    fullDescription: 'Track and analyze performance across your business, enabling data-driven decisions that increase revenue and efficiency.',
+    includes: [
+      'Sales & marketing dashboards',
+      'Customer behavior analysis',
+      'Automated KPI reporting',
+      'AI-driven trend prediction',
+      'Custom visualizations & insights'
+    ],
+    guarantee: 'Refund until ROI target is met — we ensure insights lead to measurable improvements.'
   },
   {
     icon: <Settings className="w-8 h-8" />,
-    title: 'Internal Operations',
-    description: 'Automate workflows and streamline your team operations',
-    features: [
-      'Auto-generated reports, documents & summaries',
-      'Automated approvals, follow-ups, scheduling',
-      'Smart alerts via Slack, Telegram, or email',
-      'Data syncing across Notion, Airtable, Sheets'
-    ]
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8" />,
-    title: 'Business Insights',
-    description: 'Data-driven intelligence for smarter business decisions',
-    features: [
-      'Market & competitor data scraping',
-      'Weekly AI-powered performance summaries',
-      'Sales prediction & anomaly alerts',
-      'Feedback clustering & analytics'
-    ]
+    title: 'Operations & Workflow Automation',
+    shortDescription: 'Streamline processes to save time and costs',
+    fullDescription: 'Reduce manual tasks and errors by automating critical business operations.',
+    includes: [
+      'Inventory & supply chain automation',
+      'Order & fulfillment workflows',
+      'Automated internal approvals',
+      'Integration between tools & platforms',
+      'Recurring task scheduling'
+    ],
+    guarantee: 'Refund until ROI target is met — efficiency improvements are guaranteed.'
   },
   {
     icon: <PenTool className="w-8 h-8" />,
-    title: 'Content Creation',
-    description: 'AI-powered content that engages and converts',
-    features: [
-      'AI-written posts, blogs, emails & scripts',
-      'Avatar videos with voiceovers from text',
-      'Auto presentations & pitch decks',
-      'Translation, transcription & repurposing'
-    ]
+    title: 'AI Content & Media Creation',
+    shortDescription: 'Generate engaging content at scale',
+    fullDescription: 'Create high-quality content faster with AI for social media, blogs, product catalogs, and more.',
+    includes: [
+      'AI-written articles & blog posts',
+      'Social media posts & campaigns',
+      'Motion graphics & AI video generation',
+      'Voice-over & audio generation',
+      'Image enhancement & design'
+    ],
+    guarantee: 'Refund until ROI target is met — content quality and engagement targets will be achieved.'
   },
   {
-    icon: <LayoutDashboard className="w-8 h-8" />,
-    title: 'Dashboard',
-    description: 'Real-time visualization of all your AI-powered services',
-    features: [
-      'Custom live dashboard visualizing all services',
-      'Real-time KPI updates',
-      'Customizable widgets and metrics',
-      'Export and share reports instantly'
-    ]
+    icon: <Target className="w-8 h-8" />,
+    title: 'Lead Generation & Prospecting',
+    shortDescription: 'Find the right clients efficiently',
+    fullDescription: 'Use AI-powered tools to identify high-quality leads and accelerate your sales pipeline.',
+    includes: [
+      'Automated lead scraping & enrichment',
+      'Targeted outreach workflows',
+      'Lead scoring & prioritization',
+      'Integration with CRM systems',
+      'Follow-up automation'
+    ],
+    guarantee: 'Refund until ROI target is met — we keep generating qualified leads until your sales goals improve.'
   },
   {
     icon: <Sparkles className="w-8 h-8" />,
-    title: 'More Services',
-    description: 'Custom solutions tailored to your unique needs',
-    features: [
-      'Custom AI workflows for teams\' unique needs',
-      'High-converting websites & landing pages',
-      'Website redesigns focused on performance',
-      'Strategic long-term partnerships'
-    ]
+    title: 'Custom Workflows',
+    shortDescription: 'Tailored solutions for any business need',
+    fullDescription: 'We design AI-driven workflows specific to your unique business challenges to maximize performance.',
+    includes: [
+      'Any automation or workflow that improves revenue, efficiency, or customer experience',
+      'Integrations with existing tools & platforms',
+      'Fully customized AI agents',
+      'Monitoring & optimization'
+    ],
+    guarantee: 'Refund until ROI target is met — your custom workflow will deliver measurable results or you get refunded.'
   }
 ];
 
@@ -124,11 +158,11 @@ export default function Services() {
               </h3>
 
               <p className="text-gray-600 mb-4 leading-relaxed">
-                {service.description}
+                {service.shortDescription}
               </p>
 
               <div className="flex items-center justify-between text-orange-500 font-semibold">
-                <span className="text-sm">Learn more</span>
+                <span className="text-sm">Learn more &lt;</span>
                 <ChevronDown
                   className={`w-5 h-5 transition-transform duration-300 ${
                     expandedIndex === index ? 'rotate-180' : ''
@@ -138,17 +172,35 @@ export default function Services() {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ${
-                  expandedIndex === index ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
+                  expandedIndex === index ? 'max-h-[800px] opacity-100 mt-6' : 'max-h-0 opacity-0'
                 }`}
               >
-                <ul className="space-y-3 border-t border-gray-200 pt-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-gray-700">
-                      <span className="text-orange-500 mt-1">✓</span>
-                      <span className="text-sm leading-relaxed">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="border-t border-gray-200 pt-6 space-y-6">
+                  <div>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      {service.fullDescription}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-black mb-3">Includes:</h4>
+                    <ul className="space-y-2">
+                      {service.includes.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-orange-500 mt-1">•</span>
+                          <span className="text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-orange-50 rounded-xl p-4 border-l-4 border-orange-500">
+                    <h4 className="font-bold text-black mb-2">Guarantee:</h4>
+                    <p className="text-sm text-gray-800 leading-relaxed">
+                      {service.guarantee}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
