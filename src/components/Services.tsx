@@ -149,7 +149,7 @@ export default function Services() {
               className="service-card group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100"
               onClick={() => toggleExpand(index)}
             >
-              <div className="text-teal-500 mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+              <div className="text-orange-500 mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 {service.icon}
               </div>
 
@@ -161,7 +161,7 @@ export default function Services() {
                 {service.shortDescription}
               </p>
 
-              <div className="flex items-center justify-between text-teal-500 font-semibold">
+              <div className="flex items-center justify-between text-orange-500 font-semibold">
                 <span className="text-sm">Learn more</span>
                 <ChevronDown
                   className={`w-5 h-5 transition-transform duration-300 ${
@@ -187,14 +187,14 @@ export default function Services() {
                     <ul className="space-y-2">
                       {service.includes.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-gray-700">
-                          <span className="text-teal-500 mt-1">•</span>
+                          <span className="text-orange-500 mt-1">•</span>
                           <span className="text-sm leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="bg-teal-50 rounded-xl p-4 border-l-4 border-teal-500">
+                  <div className="bg-orange-50 rounded-xl p-4 border-l-4 border-orange-500">
                     <h4 className="font-bold text-black mb-2">Guarantee:</h4>
                     <p className="text-sm text-gray-800 leading-relaxed">
                       {service.guarantee}

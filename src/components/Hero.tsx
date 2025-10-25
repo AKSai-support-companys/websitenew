@@ -37,14 +37,14 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-teal-200/30 to-cyan-400/20 rounded-full blur-3xl animate-float"
+          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-orange-200/30 to-orange-400/20 rounded-full blur-3xl animate-float"
           style={{ transform: `translateY(${parallaxOffset * 0.3}px)` }}
         ></div>
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-cyan-300/20 to-teal-500/30 rounded-full blur-3xl animate-float-delayed"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-orange-300/20 to-orange-500/30 rounded-full blur-3xl animate-float-delayed"
           style={{ transform: `translateY(${parallaxOffset * 0.5}px)` }}
         ></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-teal-100/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-orange-100/20 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       <div className="cinematic-grid absolute inset-0 opacity-[0.02]"></div>
@@ -106,15 +106,15 @@ export default function Hero() {
 
         <div className="floating-elements">
           <div className="floating-card floating-card-1 animate-slide-in-left">
-            <Sparkles className="w-8 h-8 text-teal-500" />
+            <Sparkles className="w-8 h-8 text-orange-500" />
             <span className="text-sm font-semibold text-gray-800">AI-Powered</span>
           </div>
           <div className="floating-card floating-card-2 animate-slide-in-right">
-            <Zap className="w-8 h-8 text-cyan-500" />
+            <Zap className="w-8 h-8 text-orange-500" />
             <span className="text-sm font-semibold text-gray-800">Lightning Fast</span>
           </div>
           <div className="floating-card floating-card-3 animate-slide-in-left-delayed">
-            <TrendingUp className="w-8 h-8 text-teal-500" />
+            <TrendingUp className="w-8 h-8 text-orange-500" />
             <span className="text-sm font-semibold text-gray-800">Scale Growth</span>
           </div>
         </div>
