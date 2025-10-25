@@ -44,7 +44,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('services')} className="nav-link">Services</button>
             <button onClick={() => scrollToSection('hosting')} className="nav-link">Hosting</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
-            <button className="gradient-button px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-orange-500/50 transition-all duration-300">
+            <button className="gradient-button px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-teal-500/50 transition-all duration-300">
               Get Started
             </button>
           </nav>

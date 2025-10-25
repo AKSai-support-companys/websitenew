@@ -37,7 +37,7 @@ export default function Contact() {
           <div className="space-y-8">
             <div className="contact-feature-card group">
               <div className="flex items-start gap-4">
-                <div className="p-4 bg-orange-100 rounded-2xl text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                <div className="p-4 bg-teal-100 rounded-2xl text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -45,7 +45,7 @@ export default function Contact() {
                   <p className="text-gray-600">
                     Drop us a line and we'll get back to you within 24 hours
                   </p>
-                  <a href="mailto:hello@aksforai.com" className="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                  <a href="mailto:hello@aksforai.com" className="text-teal-600 font-semibold hover:text-teal-700 transition-colors">
                     hello@aksforai.com
                   </a>
                 </div>
@@ -54,7 +54,7 @@ export default function Contact() {
 
             <div className="contact-feature-card group">
               <div className="flex items-start gap-4">
-                <div className="p-4 bg-orange-100 rounded-2xl text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                <div className="p-4 bg-teal-100 rounded-2xl text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
                   <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
@@ -62,26 +62,26 @@ export default function Contact() {
                   <p className="text-gray-600">
                     Chat with our team in real-time for immediate assistance
                   </p>
-                  <button className="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                  <button className="text-teal-600 font-semibold hover:text-teal-700 transition-colors">
                     Start chatting →
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="p-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl text-white">
+            <div className="p-8 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-3xl text-white">
               <h3 className="text-2xl font-bold mb-4">Why Choose AKS for AI?</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-200">✓</span>
+                  <span className="text-teal-200">✓</span>
                   <span>Tailored AI solutions for your unique business needs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-200">✓</span>
+                  <span className="text-teal-200">✓</span>
                   <span>Ongoing support and strategic partnership</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-200">✓</span>
+                  <span className="text-teal-200">✓</span>
                   <span>Proven track record of increasing ROI</span>
                 </li>
               </ul>
@@ -101,7 +101,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors text-gray-900"
+                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors text-gray-900"
                   placeholder="John Doe"
                 />
               </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors text-gray-900"
+                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors text-gray-900"
                   placeholder="john@company.com"
                 />
               </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors text-gray-900"
+                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors text-gray-900"
                   placeholder="Your Company"
                 />
               </div>

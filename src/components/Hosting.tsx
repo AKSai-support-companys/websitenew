@@ -81,13 +81,13 @@ export default function Hosting() {
           {hostingOptions.map((option, index) => (
             <div
               key={index}
-              className="hosting-card group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer border-2 border-gray-200 hover:border-orange-400"
+              className="hosting-card group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer border-2 border-gray-200 hover:border-teal-400"
               onClick={() => toggleExpand(index)}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10">
-                <div className="text-orange-500 mb-6 transform group-hover:scale-110 transition-all duration-300">
+                <div className="text-teal-500 mb-6 transform group-hover:scale-110 transition-all duration-300">
                   {option.icon}
                 </div>
 
@@ -95,7 +95,7 @@ export default function Hosting() {
                   {option.title}
                 </h3>
 
-                <p className="text-orange-600 font-semibold mb-4">
+                <p className="text-teal-600 font-semibold mb-4">
                   {option.subtitle}
                 </p>
 
@@ -103,7 +103,7 @@ export default function Hosting() {
                   {option.description}
                 </p>
 
-                <div className="flex items-center justify-between text-orange-500 font-semibold mb-4">
+                <div className="flex items-center justify-between text-teal-500 font-semibold mb-4">
                   <span className="text-sm">View Details</span>
                   <ChevronDown
                     className={`w-5 h-5 transition-transform duration-300 ${
@@ -123,16 +123,16 @@ export default function Hosting() {
                       <ul className="space-y-2">
                         {option.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-3 text-gray-700">
-                            <span className="text-orange-500 mt-1">✓</span>
+                            <span className="text-teal-500 mt-1">✓</span>
                             <span className="text-sm leading-relaxed">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="bg-orange-50 rounded-xl p-4">
+                    <div className="bg-teal-50 rounded-xl p-4">
                       <p className="text-sm font-semibold text-gray-800">
-                        <span className="text-orange-600">Best for:</span> {option.bestFor}
+                        <span className="text-teal-600">Best for:</span> {option.bestFor}
                       </p>
                     </div>
                   </div>
