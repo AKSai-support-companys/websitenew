@@ -40,7 +40,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xl font-bold text-black mb-2">WhatsApp</h3>
                   <p className="text-gray-600">
-                    Message us directly for quick questions
+                    Message us directly 
                   </p>
                   <a href="https://wa.me/212781390577" target="_blank" rel="noopener noreferrer" className="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
                     Start WhatsApp Chat
