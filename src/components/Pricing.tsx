@@ -509,14 +509,6 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                {model.example && (
-                  <div className={`bg-gradient-to-br ${model.gradient} bg-opacity-10 rounded-lg p-3 mb-4 border border-orange-200`}>
-                    <p className="text-xs font-semibold text-orange-700">
-                      {model.example}
-                    </p>
-                  </div>
-                )}
-
                 <button className="w-full py-2 px-4 bg-black text-white font-semibold rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform duration-300" />

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Clock, Briefcase, BarChart3, TrendingDown, TrendingUp, Zap, Layers, Activity, ArrowRight, X, Check } from 'lucide-react';
+import { Clock, Briefcase, BarChart3, TrendingDown, TrendingUp, Zap, Layers, Activity, ArrowRight, X } from 'lucide-react';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
@@ -36,7 +36,6 @@ const pricingModels: PricingModel[] = [
       'Transparent hourly rate',
       'Total cost depends on hours worked'
     ],
-    example: '15 hours × $50/hour = $750',
     gradient: 'from-orange-400 to-orange-500',
     modalDetails: {
       title: 'Hourly Pricing Explained',
@@ -67,7 +66,8 @@ const pricingModels: PricingModel[] = [
           items: [
             'Email automation setup: 8 hours × $75/hour = $600',
             'CRM integration: 15 hours × $50/hour = $750',
-            'Chatbot customization: 12 hours × $60/hour = $720'
+            'Chatbot customization: 12 hours × $60/hour = $720',
+            'API integration: 20 hours × $65/hour = $1,300'
           ]
         }
       ]
@@ -109,11 +109,12 @@ const pricingModels: PricingModel[] = [
           ]
         },
         {
-          title: 'Change Request Process',
+          title: 'Real-World Examples',
           items: [
-            'Out-of-scope changes are documented',
-            'Change request pricing is quoted separately',
-            'Scope creep is prevented with clear boundaries'
+            'Email campaign automation: $5,000 fixed price',
+            'CRM integration project: $8,500 fixed price',
+            'Full workflow system: $15,000 fixed price',
+            'Data synchronization suite: $12,000 fixed price'
           ]
         }
       ]
@@ -136,7 +137,7 @@ const pricingModels: PricingModel[] = [
       ],
       sections: [
         {
-          title: 'Tier Comparison',
+          title: 'Subscription Tiers',
           items: [
             'BASIC: $2,000/month - Up to 5 active workflows, email support',
             'PRO: $5,000/month - Up to 15 active workflows, phone + email support, priority response',
@@ -155,11 +156,12 @@ const pricingModels: PricingModel[] = [
           ]
         },
         {
-          title: 'Support Levels & SLA',
+          title: 'Real-World Examples',
           items: [
-            'BASIC: 24-48 hour response time',
-            'PRO: 4-8 hour response time, priority queue',
-            'ENTERPRISE: 1 hour response time, dedicated team'
+            'Startup retainer: $2,000/month (5 workflows, email support)',
+            'Growing business: $5,000/month (15 workflows, priority support)',
+            'Enterprise: $10,000+/month (unlimited workflows, dedicated team)',
+            'Scale gradually: Start at Basic, upgrade to Pro after 3 months'
           ]
         }
       ]
@@ -174,7 +176,6 @@ const pricingModels: PricingModel[] = [
       'You pay a percentage of the total cost reduction',
       'Savings are calculated clearly before starting'
     ],
-    example: 'If automation saves $40,000/year - client pays 10–25% of the saved amount',
     gradient: 'from-orange-700 to-orange-800',
     modalDetails: {
       title: 'Cost-Saving Pricing Explained',
@@ -205,9 +206,10 @@ const pricingModels: PricingModel[] = [
         {
           title: 'Real-World Examples',
           items: [
-            'Data entry: Saves 40 hours/month = $2,000 savings - you pay $200-500/month',
-            'Manual approval process: Saves $60,000/year - you pay $6,000-15,000/year',
-            'Customer service: Saves 100 hours/month = $5,000 - you pay $500-1,250/month'
+            'Data entry: Saves 40 hours/month × $50/hour = $2,000/month saved - you pay 15% = $300/month',
+            'Manual approval process: Saves $60,000/year - you pay 10-15% = $6,000-9,000/year',
+            'Customer service: 100 hours/month × $50/hour = $5,000/month - you pay 12% = $600/month',
+            'Invoice processing: $80,000/year savings - you pay 20% = $16,000/year'
           ]
         }
       ]
@@ -222,7 +224,6 @@ const pricingModels: PricingModel[] = [
       'Shared success model aligned with growth',
       'Setup fee + revenue share'
     ],
-    example: '$3,000 setup + 20% of new monthly revenue generated',
     gradient: 'from-orange-800 to-orange-900',
     modalDetails: {
       title: 'Revenue-Based Pricing Explained',
@@ -253,10 +254,10 @@ const pricingModels: PricingModel[] = [
         {
           title: 'Real-World Examples',
           items: [
-            'Lead gen automation: $2,000 setup + 15% of new leads converted',
-            'Email campaign: $1,500 setup + 20% of additional revenue',
-            'Sales outreach: $3,000 setup + 25% of new deal value',
-            'Affiliate automation: $1,000 setup + 10-30% commission'
+            'Lead gen automation: $2,000 setup + 15% of new leads (if automation generates $50,000 new revenue, you pay $7,500)',
+            'Email campaign: $1,500 setup + 20% of additional revenue (generates $100,000 new revenue = $20,000 payment)',
+            'Sales outreach: $3,000 setup + 25% of new deal value ($200,000 new deals = $50,000 payment)',
+            'Affiliate automation: $1,000 setup + 10-30% commission on $500,000 annual revenue'
           ]
         }
       ]
@@ -299,13 +300,12 @@ const pricingModels: PricingModel[] = [
           ]
         },
         {
-          title: 'When to Use This Model',
+          title: 'Real-World Examples',
           items: [
-            'Mission-critical system automation',
-            'High-risk process automation',
-            'Revenue-critical workflow optimization',
-            'Strategic competitive advantage',
-            'Transformational business process redesign'
+            'Mission-critical payment system: $50,000 (prevents $1M+ annual fraud)',
+            'Supply chain automation: $75,000 (streamlines $100M annual operations)',
+            'Customer data platform: $100,000 (competitive advantage worth millions)',
+            'Risk mitigation system: $60,000 (protects against compliance violations)'
           ]
         }
       ]
@@ -338,11 +338,12 @@ const pricingModels: PricingModel[] = [
           ]
         },
         {
-          title: 'Real Hybrid Examples',
+          title: 'Real-World Examples',
           items: [
-            'Sales automation: $10,000 fixed + 10 hours/month support ($100/hour = $1,000) + 10% of net revenue',
-            'Integration project: $5,000 fixed + $100/hour for expansions + cost savings share',
-            'Data platform: $15,000 fixed + performance bonus if speed targets met'
+            'Sales automation: $10,000 fixed + 10 hours/month support ($100/hour = $1,000/month) + 10% of net revenue',
+            'Integration project: $5,000 fixed + $100/hour for expansions (20 hours = $2,000) + 15% cost savings share',
+            'Data platform: $15,000 fixed + $75/hour for optimizations (100 hours/year = $7,500) + performance bonus',
+            'Marketing suite: $8,000 fixed + 5 hours/month maintenance ($60/hour = $300/month) + 5% of generated leads'
           ]
         },
         {
@@ -379,7 +380,7 @@ const pricingModels: PricingModel[] = [
           items: [
             'Each workflow execution is one billable unit',
             'Tiered pricing: cheaper per-run at higher volumes',
-            'Example: $0.50 per run at 0-10k/month, $0.30 per run at 10k-50k/month',
+            'Price tiers: $0.50 per run (0-10k/month), $0.30 per run (10k-50k/month), $0.15 per run (50k+/month)',
             'Unlimited runs available at enterprise rates',
             'Real-time usage tracking and alerts'
           ]
@@ -387,8 +388,8 @@ const pricingModels: PricingModel[] = [
         {
           title: 'Resource Limits & Scaling',
           items: [
-            'Free tier: 100 runs/month + $0 setup',
-            'Starter: $0.50/run, unlimited runs',
+            'Free tier: 100 runs/month, $0 setup',
+            'Starter: $0.50/run (unlimited runs)',
             'Professional: $0.30/run + dedicated support',
             'Enterprise: Custom pricing at volume',
             'No overage charges with usage caps'
@@ -399,8 +400,8 @@ const pricingModels: PricingModel[] = [
           items: [
             'Startup phase: 500 runs × $0.50 = $250/month',
             'Growth phase: 50,000 runs × $0.30 = $15,000/month',
-            'Scale phase: 500,000 runs × $0.30 = $150,000/month',
-            'All with predictable per-unit economics'
+            'Scale phase: 500,000 runs × $0.15 = $75,000/month',
+            'Enterprise: 10M runs/month (custom negotiated rate)'
           ]
         }
       ]
@@ -408,70 +409,6 @@ const pricingModels: PricingModel[] = [
   }
 ];
 
-const subscriptionPlans = [
-  {
-    name: 'Starter',
-    price: '$2,000',
-    period: '/month',
-    description: 'Perfect for small businesses getting started with AI automation',
-    features: [
-      'Up to 5 active workflows',
-      'Email support',
-      'Basic analytics dashboard',
-      'Monthly strategy review',
-      'Standard response time (24-48hrs)'
-    ],
-    popular: false
-  },
-  {
-    name: 'Growth',
-    price: '$5,000',
-    period: '/month',
-    description: 'Ideal for scaling businesses ready to automate more',
-    features: [
-      'Up to 15 active workflows',
-      'Priority email & phone support',
-      'Advanced analytics & reporting',
-      'Bi-weekly strategy sessions',
-      'Priority response time (4-8hrs)',
-      'Custom integrations included'
-    ],
-    popular: true
-  },
-  {
-    name: 'Pro',
-    price: '$10,000',
-    period: '/month',
-    description: 'For established companies seeking comprehensive automation',
-    features: [
-      'Up to 30 active workflows',
-      '24/7 priority support',
-      'Real-time analytics & insights',
-      'Weekly strategy sessions',
-      'Fast response time (1-2hrs)',
-      'Dedicated account manager',
-      'Unlimited revisions'
-    ],
-    popular: false
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Tailored solutions for large-scale operations',
-    features: [
-      'Unlimited workflows',
-      'Dedicated support team',
-      'Custom AI model training',
-      'Daily check-ins available',
-      'Instant response time (<1hr)',
-      'White-glove service',
-      'Custom SLA agreements',
-      'On-premise deployment options'
-    ],
-    popular: false
-  }
-];
 
 interface ModalProps {
   model: PricingModel;
@@ -547,6 +484,13 @@ function PricingModal({ model, isOpen, onClose }: ModalProps) {
 export default function PricingPage() {
   const [selectedModel, setSelectedModel] = useState<number | null>(null);
 
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.div {...pageTransition}>
       <section className="pt-32 pb-20 bg-gradient-to-b from-white via-gray-50 to-white">
@@ -599,14 +543,6 @@ export default function PricingPage() {
                     ))}
                   </ul>
 
-                  {model.example && (
-                    <div className={`bg-gradient-to-br ${model.gradient} bg-opacity-10 rounded-lg p-3 mb-4 border border-orange-200`}>
-                      <p className="text-xs font-semibold text-orange-700">
-                        {model.example}
-                      </p>
-                    </div>
-                  )}
-
                   <button className="w-full py-2 px-4 bg-black text-white font-semibold rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm">
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
@@ -620,74 +556,16 @@ export default function PricingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mb-20"
-          >
-            <h2 className="text-4xl font-bold text-black mb-6 text-center">
-              Subscription <span className="gradient-text">Plans</span>
-            </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Monthly retainer plans with predictable costs and ongoing support
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {subscriptionPlans.map((plan, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-                  className={`relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${
-                    plan.popular ? 'border-orange-500 scale-105' : 'border-gray-200'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                      <Zap className="w-4 h-4" />
-                      Most Popular
-                    </div>
-                  )}
-
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-black mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline gap-1 mb-3">
-                      <span className="text-5xl font-bold gradient-text">{plan.price}</span>
-                      <span className="text-gray-600">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">{plan.description}</p>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'gradient-button text-white shadow-lg hover:shadow-orange-500/50'
-                      : 'border-2 border-black text-black hover:bg-black hover:text-white'
-                  }`}>
-                    Get Started
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className="mt-16 text-center bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border-2 border-orange-200"
+            className="mt-20 text-center bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border-2 border-orange-200"
           >
             <h3 className="text-2xl font-bold text-black mb-4">Not Sure Which Model to Choose?</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               Schedule a consultation call with our team. We'll analyze your needs and recommend the perfect pricing structure for your business.
             </p>
-            <button className="gradient-button px-8 py-4 rounded-full text-white font-semibold shadow-lg hover:shadow-orange-500/50 transition-all duration-300">
+            <button
+              onClick={handleContactClick}
+              className="gradient-button px-8 py-4 rounded-full text-white font-semibold shadow-lg hover:shadow-orange-500/50 transition-all duration-300"
+            >
               Schedule Consultation
             </button>
           </motion.div>
