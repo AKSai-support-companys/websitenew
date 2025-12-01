@@ -1,4 +1,4 @@
-import { Mail, MessageSquare, Phone } from 'lucide-react';
+import { Mail, MessageSquare, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -52,15 +52,15 @@ export default function Contact() {
             <div className="contact-feature-card group">
               <div className="flex items-start gap-4">
                 <div className="p-4 bg-orange-100 rounded-2xl text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                  <Phone className="w-6 h-6" />
+                  <Send className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-black mb-2">Call Us</h3>
+                  <h3 className="text-xl font-bold text-black mb-2">Telegram</h3>
                   <p className="text-gray-600">
-                    Speak directly with our team
+                    Chat with us instantly on Telegram
                   </p>
-                  <a href="tel:+212781390577" className="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
-                    +212 781-390577
+                  <a href="https://t.me/+212781390577" target="_blank" rel="noopener noreferrer" className="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                    Start Telegram Chat
                   </a>
                 </div>
               </div>
