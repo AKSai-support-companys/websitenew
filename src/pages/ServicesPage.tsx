@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Handshake, ShoppingCart, MessageCircle, BarChart3, Settings, PenTool, Target, Sparkles, X } from 'lucide-react';
+import { Handshake, ShoppingCart, MessageCircle, BarChart3, Settings, PenTool, Target, Sparkles, X, ArrowRight } from 'lucide-react';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
