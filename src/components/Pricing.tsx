@@ -520,9 +520,23 @@ export default function Pricing() {
 
         <div className="mt-20 text-center">
           <div className="inline-block bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border-2 border-orange-200 max-w-2xl">
-            <p className="text-lg text-gray-800">
-              <span className="font-bold text-orange-600">Not sure which model fits your needs?</span> Schedule a consultation call with our team. We'll analyze your situation and recommend the perfect pricing structure.
+            <p className="text-lg text-gray-800 mb-6">
+              <span className="font-bold text-orange-600">Not sure which model fits your needs?</span> We'll analyze your needs and recommend the perfect pricing structure.
             </p>
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/contact';
+                }
+              }}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full hover:shadow-lg transition-all duration-300"
+            >
+              Analyse my needs
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
