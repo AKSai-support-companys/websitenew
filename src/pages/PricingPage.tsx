@@ -560,7 +560,7 @@ export default function PricingPage() {
           >
             <h3 className="text-2xl font-bold text-black mb-4">Not Sure Which Model to Choose?</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              l'ets contact now . We'll analyze your needs and recommend the perfect pricing structure for your business.
+              let's contact now . We'll analyze your needs and recommend the perfect pricing structure for your business.
             </p>
             <button
               onClick={handleContactClick}
