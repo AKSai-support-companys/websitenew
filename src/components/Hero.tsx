@@ -92,7 +92,17 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 animate-slide-in-up-delayed-2">
-            <button className="group cta-button gradient-button px-10 py-5 rounded-full text-white font-semibold text-lg flex items-center gap-3 shadow-2xl hover:shadow-orange-500/50 transition-all duration-300">
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/contact';
+                }
+              }}
+              className="group cta-button gradient-button px-10 py-5 rounded-full text-white font-semibold text-lg flex items-center gap-3 shadow-2xl hover:shadow-orange-500/50 transition-all duration-300"
+            >
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>

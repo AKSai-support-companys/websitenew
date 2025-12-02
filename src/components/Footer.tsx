@@ -103,6 +103,11 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Company</h3>
             <ul className="space-y-3 text-gray-400">
               <li>
+                <Link to="/hosting" className="hover:text-orange-500 transition-colors duration-300">
+                  Hosting Options
+                </Link>
+              </li>
+              <li>
                 <Link to="/about" className="hover:text-orange-500 transition-colors duration-300">
                   About Us
                 </Link>
@@ -110,11 +115,6 @@ export default function Footer() {
               <li>
                 <Link to="/pricing" className="hover:text-orange-500 transition-colors duration-300">
                   Pricing Models
-                </Link>
-              </li>
-              <li>
-                <Link to="/hosting" className="hover:text-orange-500 transition-colors duration-300">
-                  Hosting Options
                 </Link>
               </li>
               <li>

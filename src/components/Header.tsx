@@ -62,16 +62,16 @@ export default function Header() {
               Pricing
             </Link>
             <Link
-              to="/about"
-              className={`nav-link ${isActive('/about') ? 'active' : ''}`}
-            >
-              About
-            </Link>
-            <Link
               to="/hosting"
               className={`nav-link ${isActive('/hosting') ? 'active' : ''}`}
             >
               Hosting
+            </Link>
+            <Link
+              to="/about"
+              className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+            >
+              About
             </Link>
             <Link
               to="/contact"
@@ -79,12 +79,19 @@ export default function Header() {
             >
               Contact
             </Link>
-            <Link
-              to="/contact"
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/contact';
+                }
+              }}
               className="gradient-button px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-orange-500/50 transition-all duration-300"
             >
               Get Started
-            </Link>
+            </button>
           </nav>
 
           <button
@@ -100,12 +107,22 @@ export default function Header() {
             <Link to="/" className="block w-full text-left nav-link py-2">Home</Link>
             <Link to="/services" className="block w-full text-left nav-link py-2">Services</Link>
             <Link to="/pricing" className="block w-full text-left nav-link py-2">Pricing</Link>
-            <Link to="/about" className="block w-full text-left nav-link py-2">About</Link>
             <Link to="/hosting" className="block w-full text-left nav-link py-2">Hosting</Link>
+            <Link to="/about" className="block w-full text-left nav-link py-2">About</Link>
             <Link to="/contact" className="block w-full text-left nav-link py-2">Contact</Link>
-            <Link to="/contact" className="w-full gradient-button px-8 py-3 rounded-full text-white font-semibold shadow-lg block text-center">
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/contact';
+                }
+              }}
+              className="w-full gradient-button px-8 py-3 rounded-full text-white font-semibold shadow-lg block text-center"
+            >
               Get Started
-            </Link>
+            </button>
           </nav>
         )}
       </div>
