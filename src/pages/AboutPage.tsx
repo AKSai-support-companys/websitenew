@@ -163,7 +163,17 @@ export default function AboutPage() {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join hundreds of companies that have multiplied their efficiency and revenue with AI automation.
             </p>
-            <button className="gradient-button px-10 py-4 rounded-full text-white font-semibold text-lg shadow-xl hover:shadow-orange-500/50 transition-all duration-300">
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/contact';
+                }
+              }}
+              className="gradient-button px-10 py-4 rounded-full text-white font-semibold text-lg shadow-xl hover:shadow-orange-500/50 transition-all duration-300"
+            >
               Start Your Journey
             </button>
           </motion.div>
