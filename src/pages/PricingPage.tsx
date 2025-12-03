@@ -484,13 +484,6 @@ function PricingModal({ model, isOpen, onClose }: ModalProps) {
 export default function PricingPage() {
   const [selectedModel, setSelectedModel] = useState<number | null>(null);
 
-  const handleContactClick = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <motion.div {...pageTransition}>
       <section className="pt-32 pb-20 bg-gradient-to-b from-white via-gray-50 to-white">
@@ -552,23 +545,6 @@ export default function PricingPage() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-20 text-center bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border-2 border-orange-200"
-          >
-            <h3 className="text-2xl font-bold text-black mb-4">Not Sure Which Model to Choose?</h3>
-            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              let's contact now . We'll analyze your needs and recommend the perfect pricing structure for your business.
-            </p>
-            <button
-              onClick={handleContactClick}
-              className="gradient-button px-8 py-4 rounded-full text-white font-semibold shadow-lg hover:shadow-orange-500/50 transition-all duration-300"
-            >
-              Analyse my needs
-            </button>
-          </motion.div>
         </div>
       </section>
 
