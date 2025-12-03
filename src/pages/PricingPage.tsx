@@ -566,7 +566,7 @@ export default function PricingPage() {
               onClick={handleContactClick}
               className="gradient-button px-8 py-4 rounded-full text-white font-semibold shadow-lg hover:shadow-orange-500/50 transition-all duration-300"
             >
-              Schedule Consultation
+              Analyse my needs
             </button>
           </motion.div>
         </div>
